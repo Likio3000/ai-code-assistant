@@ -83,11 +83,17 @@ ${suggestions}
   }
 }
 
-export async function* getGeminiResponse(
+export async function* getStreamingResponse(
   userCode: string,
   cachedSuggestions: { agent: string, content: string } | null,
+  provider: string,
   model: string
 ): AsyncGenerator<StreamEvent> {
+    if (provider !== 'google') {
+        const agentName = `${provider.charAt(0).toUpperCase() + provider.slice(1)} / ${model}`;
+        yield { type: 'error', agent: agentName, content: `The '${provider}' provider is not yet implemented in this application.` };
+        return;
+    }
   
     if (cachedSuggestions) {
     // Phase 2 only: Generate code from cached suggestions
