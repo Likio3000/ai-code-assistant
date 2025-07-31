@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Message, MessageRole, MessageType } from './types';
-import { getStreamingResponse } from './services/geminiService';
+import { getStreamingResponse } from './services';
 import Header from './components/Header';
 import ChatInput from './components/ChatInput';
 import ChatMessage from './components/ChatMessage';
