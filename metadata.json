@@ -1,0 +1,6 @@
+{
+  "name": "AI Code Assistant",
+  "description": "An AI-powered chat application to help developers analyze, refactor, and improve their code. The assistant provides actionable suggestions and can generate updated code snippets in real-time.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
